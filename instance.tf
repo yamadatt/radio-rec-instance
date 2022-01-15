@@ -24,7 +24,7 @@ resource "aws_instance" "raido-rec" {
   network_interface {
     network_interface_id = aws_network_interface.raido-rec.id
     device_index         = 0
-    }
+  }
 }
 
 
