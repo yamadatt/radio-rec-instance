@@ -16,8 +16,8 @@ data "aws_ssm_parameter" "amzn2_latest_ami" {
 }
 
 resource "aws_instance" "raido-rec" {
-  ami           = data.aws_ssm_parameter.amzn2_latest_ami.value # last parameter is the default value
-  instance_type = "t2.micro"
+  ami                     = data.aws_ssm_parameter.amzn2_latest_ami.value # last parameter is the default value
+  instance_type           = "t2.micro"
   disable_api_termination = false
   monitoring              = false
   key_name                = "radio"
