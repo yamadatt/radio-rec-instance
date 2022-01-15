@@ -30,7 +30,7 @@ resource "aws_internet_gateway" "igw" {
 resource "aws_subnet" "public_subnet_1a" {
   vpc_id                  = aws_vpc.vpc.id
   availability_zone       = "ap-northeast-1a"
-  cidr_block              = cidrsubnet(var.vpc_cidr, 8, 0) # "10.0.0.0/24"
+  cidr_block              = cidrsubnet(var.vpc_cidr, 8, 0) # 10.0.0.0/24
   map_public_ip_on_launch = true
 
   tags = {
