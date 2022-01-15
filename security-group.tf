@@ -31,3 +31,11 @@ resource "aws_security_group_rule" "in_ssh" {
   security_group_id = aws_security_group.radio_sg.id
 }
 
+resource "aws_security_group_rule" "out_ip_any" {
+  type              = "egress"
+  from_port       = 0
+  to_port         = 0
+  protocol        = "-1"
+  cidr_blocks     = ["0.0.0.0/0"]
+  security_group_id = aws_security_group.radio_sg.id
+  }
