@@ -14,11 +14,9 @@
 
 このterraformでEC2インスタンス構築まで行う。
 
-ミドルウエア等は手で構築する。（ansibleで動かせるようにしたい）
+ミドルウエア等はこのリポジトリの[ansible](https://github.com/yamadatt/ansible-ec2)で構築する。
 
 git,dockerをインストールして、タイムゾーンの変更で動くと思うので、頑張って手で構築すること。
-
-
 
 ## 使い方
 
@@ -26,17 +24,15 @@ git,dockerをインストールして、タイムゾーンの変更で動くと�
 
 applyとdestroyは```-auto-approve```オプションをつけると便利。
 
-```
-terraform init
-terraform plan
-terraform apply -auto-approve
-```
+    terraform init
+    terraform plan
+    terraform apply -auto-approve
+
 
 環境の削除コマンド
 
-```
-terraform destroy -auto-approve
-```
+    terraform destroy -auto-approve
+
 
 ## 環境
 
@@ -44,22 +40,16 @@ terraform destroy -auto-approve
 
 awscliがインストールされていること
 
-```
-aws --version
-aws-cli/1.14.28 Python/2.7.5 Linux/3.10.0-693.21.1.el7.x86_64 botocore/1.8.35
-```
+    aws --version
+    aws-cli/1.14.28 Python/2.7.5 Linux/3.10.0-693.21.1.el7.x86_64 botocore/1.8.35
 
 ### 動作を確認したterraformのバージョン
 
 以下のバージョンで動作確認している。
 
-
-
-```
-terraform --version
-Terraform v1.1.3
-on linux_amd64
-```
+    terraform --version
+    Terraform v1.1.3
+    on linux_amd64
 
 ### キーペアの作成
 
@@ -68,5 +58,3 @@ on linux_amd64
 ここではradioという名前で作成している。
 
 ダウンロードしたキーファイルは```chmod 600```しておく。
-
-
