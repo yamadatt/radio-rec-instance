@@ -21,7 +21,7 @@ data "aws_ssm_parameter" "amzn2_latest_ami" {
 resource "aws_instance" "raido-rec" {
   ami                     = data.aws_ssm_parameter.amzn2_latest_ami.value # last parameter is the default value
 #  ami = "ami-0821549eeea15770b" #ubunt20.04
-  instance_type           = "t3.small"
+  instance_type           = "t3.nano"
   disable_api_termination = false
   monitoring              = false
   key_name                = "radio"
