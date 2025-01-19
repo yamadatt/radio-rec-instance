@@ -41,14 +41,14 @@ applyとdestroyは```-auto-approve```オプションをつけると便利。
 awscliがインストールされていること
 
     aws --version
-    aws-cli/1.14.28 Python/2.7.5 Linux/3.10.0-693.21.1.el7.x86_64 botocore/1.8.35
+    aws-cli/2.17.44 Python/3.11.9 Linux/6.8.0-51-generic exe/x86_64.ubuntu.22
 
 ### 動作を確認したterraformのバージョン
 
 以下のバージョンで動作確認している。
 
     terraform --version
-    Terraform v1.1.3
+    Terraform v1.9.8
     on linux_amd64
 
 ### キーペアの作成

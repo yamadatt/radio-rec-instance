@@ -36,7 +36,7 @@ resource "aws_instance" "raido-rec" {
 
   root_block_device {
     volume_size           = 8
-    volume_type           = "gp3"
+    volume_type           = "gp2"
     delete_on_termination = true
     tags = {
       Name = "radio-ebs"
